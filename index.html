@@ -14,6 +14,12 @@
     <meta name="theme-color" content="#FAF7F2" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#14120F" media="(prefers-color-scheme: dark)" />
 
+    <!-- Les deux fichiers sont produits par `npm run data:brand` depuis le kit
+         de marque, et doivent être déposés à la racine du dépôt qui publie
+         cette page — ils ne voyagent pas avec le HTML. -->
+    <link rel="icon" href="/riwaya-privacy/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/riwaya-privacy/apple-touch-icon.png" />
+
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Confidentialité — Riwaya" />
     <meta property="og:description" content="Ce qui reste sur votre iPhone, et ce qui en sort." />
@@ -21,6 +27,14 @@
     <meta property="og:locale:alternate" content="en_GB" />
     <link rel="canonical" href="https://moherof.github.io/riwaya-privacy/" />
     <meta property="og:url" content="https://moherof.github.io/riwaya-privacy/" />
+
+    <!-- Absolue, et non relative : les robots de iMessage, WhatsApp et X ne
+         résolvent pas un chemin relatif pour une vignette. -->
+    <meta property="og:image" content="https://moherof.github.io/riwaya-privacy/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Riwaya, par Skeymapp" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -463,12 +477,12 @@
           <h1>Ce qui reste sur votre téléphone, et ce qui en sort</h1>
           <p class="lede">
             Riwaya n’a ni compte, ni inscription, ni mot de passe. Les textes sont livrés avec
-            l’application et s’affichent sans connexion. Trois choses seulement quittent votre
+            l’application et s’affichent sans connexion. Quatre choses seulement quittent votre
             iPhone&nbsp;: cette page dit lesquelles, et pourquoi.
           </p>
 
           <p class="stamp">
-            <span><b>Dernière mise à jour</b> 10 septembre 2026</span>
+            <span><b>Dernière mise à jour</b> 15 septembre 2026</span>
             <span><b>Application</b> Riwaya pour iPhone</span>
           </p>
 
@@ -494,6 +508,10 @@
                   Un nom de ville, ou des coordonnées
                   <span class="to">vers Apple, pour le géocodage d’iOS</span>
                 </li>
+                <li>
+                  L’origine de l’installation, si vous l’acceptez
+                  <span class="to">vers TikTok, pour la publicité</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -518,19 +536,42 @@
               un abonnement proposé ou souscrit.
             </p>
             <p>
-              Ces comptes ne portent <strong>aucun identifiant</strong>. Ni nom, ni adresse, ni
-              numéro d’appareil, ni identifiant publicitaire, ni position. Rien ne permet de relier
-              deux ouvertures à la même personne, ni de vous suivre d’une application à l’autre. Ce
-              que vous lisez, ce que vous mettez en favori et ce que vous partagez n’en font pas
-              partie.
+              Ces comptes-là ne portent <strong>aucun identifiant</strong>. Ni nom, ni adresse, ni
+              numéro d’appareil, ni identifiant publicitaire, ni position. Rien n’y permet de relier
+              deux ouvertures à la même personne. Ce que vous lisez, ce que vous mettez en favori et
+              ce que vous partagez n’en font pas partie.
             </p>
             <p>
               Si l’application s’interrompt, le rapport de l’incident est envoyé de la même façon,
               pour qu’il puisse être corrigé.
             </p>
             <p>
-              Ces mesures sont traitées par Aptabase, sur des serveurs situés dans l’Union
+              Ces mesures-là sont traitées par Aptabase, sur des serveurs situés dans l’Union
               européenne.
+            </p>
+          </section>
+
+          <section>
+            <h2>Publicité et attribution</h2>
+            <p>
+              Si vous avez découvert Riwaya par une publicité sur TikTok, l’application signale à
+              TikTok que l’installation vient de là. C’est ce qui permet de savoir quelles annonces
+              servent à quelque chose, et d’arrêter les autres.
+            </p>
+            <p>
+              Au premier lancement, iOS vous demande si vous acceptez ce suivi.
+              <strong>Vous pouvez refuser</strong>&nbsp;: l’application fonctionne exactement de la
+              même façon, sans aucune fonctionnalité en moins. Si vous acceptez, l’identifiant
+              utilisé est celui d’Apple — l’identifiant publicitaire —, que vous pouvez retirer à
+              tout moment dans Réglages&nbsp;› Confidentialité et sécurité&nbsp;› Suivi.
+            </p>
+            <p>
+              Ce qui est signalé tient en une ligne&nbsp;: l’installation, les ouvertures de
+              l’application, et quatre moments — la fin de la configuration initiale, l’ouverture
+              de l’écran d’abonnement, l’appui sur «&nbsp;S’abonner&nbsp;», et l’abonnement effectif
+              avec le montant réglé. Rien d’autre ne part&nbsp;: ni verset lu, ni favori, ni
+              position dans la lecture, ni lieu. Ces signaux sont traités par TikTok, hors de
+              l’Union européenne.
             </p>
           </section>
 
@@ -621,12 +662,12 @@
           <h1>What stays on your phone, and what leaves it</h1>
           <p class="lede">
             Riwaya has no account, no sign-up and no password. The texts ship with the app and
-            display without a connection. Only three things ever leave your iPhone — this page says
+            display without a connection. Only four things ever leave your iPhone — this page says
             which, and why.
           </p>
 
           <p class="stamp">
-            <span><b>Last updated</b> 10 September 2026</span>
+            <span><b>Last updated</b> 15 September 2026</span>
             <span><b>App</b> Riwaya for iPhone</span>
           </p>
 
@@ -651,6 +692,10 @@
                 <li>
                   A city name, or coordinates <span class="to">to Apple, for iOS geocoding</span>
                 </li>
+                <li>
+                  Where the install came from, if you accept
+                  <span class="to">to TikTok, for advertising</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -673,9 +718,9 @@
             </p>
             <p>
               These counts carry <strong>no identifier</strong>. No name, no address, no device
-              number, no advertising identifier, no location. Nothing makes it possible to tie two
-              openings to the same person, or to follow you from one app to another. What you read,
-              what you save and what you share are not part of it.
+              number, no advertising identifier, no location. Nothing in them makes it possible to
+              tie two openings to the same person. What you read, what you save and what you share
+              are not part of it.
             </p>
             <p>
               If the app stops unexpectedly, the crash report is sent the same way, so that it can
@@ -683,6 +728,28 @@
             </p>
             <p>
               This measurement is processed by Aptabase, on servers located in the European Union.
+            </p>
+          </section>
+
+          <section>
+            <h2>Advertising and attribution</h2>
+            <p>
+              If you found Riwaya through an ad on TikTok, the app tells TikTok that the install
+              came from there. That is what makes it possible to know which ads are worth anything,
+              and to stop the rest.
+            </p>
+            <p>
+              On first launch, iOS asks whether you accept this tracking. <strong>You can
+              decline</strong>: the app works in exactly the same way, with nothing removed. If you
+              accept, the identifier used is Apple’s — the advertising identifier — which you can
+              withdraw at any time in Settings&nbsp;› Privacy &amp; Security&nbsp;› Tracking.
+            </p>
+            <p>
+              What gets reported fits on one line: the install, app launches, and four moments —
+              finishing the initial setup, opening the subscription screen, tapping “Subscribe”,
+              and an actual subscription along with the amount paid. Nothing else leaves the
+              device: no verse you read, no favourite, no reading position, no location. These
+              signals are processed by TikTok, outside the European Union.
             </p>
           </section>
 
